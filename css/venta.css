@@ -1,0 +1,176 @@
+:root {
+    --background-color-cabezal: #F2EBDE;
+    --background-color-cuerpo: #f7f2ec;
+    --primary-color: #c78b5b;
+    --barra-desplazamiento: #f3cd9f;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.retroceso {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.retroceso .fa-chevron-left {
+    font-size: 1.5rem;
+    color: #007bff;
+}
+
+.retroceso .btn {
+    text-decoration: none;
+    color: #007bff;
+    transition: transform 0.2s ease-in-out;
+}
+
+.retroceso .btn:hover {
+    transform: translateX(-3px);
+}
+
+header {
+    background-color: var(--barra-desplazamiento);
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.productos {
+    height: 500px; 
+    overflow-y: auto;
+    overflow-x: none;
+    padding: 10px;
+    min-width: 600px;
+}
+
+.buscador {
+    margin-bottom: 10px;
+}
+
+.buscador input {
+    width: 70%;
+    padding: 2px;
+    border: 2px solid #020352f1;
+    font-size: 18px;
+    align-items: center;
+}
+
+.productos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px;
+}
+
+.producto {
+    background-color: #f9f9f9;
+    padding: 10px;
+    width: 45%;
+    border-radius: 8px;
+}
+
+.producto h2 {
+    margin-top: 0;
+}
+
+.producto p {
+    margin-bottom: 5px;
+}
+
+.agregar-btn {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.agregar-btn:hover {
+    background-color: #45a049;
+}
+
+.boleta {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.boleta h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+#boleta {
+    width: 500px;
+    border-collapse: collapse;
+}
+
+#boleta th, #boleta td {
+    border-bottom: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#boleta tfoot {
+    font-weight: bold;
+}
+
+#boleta tfoot td {
+    padding-top: 10px;
+}
+
+#cliente-form {
+    margin-top: 20px;
+}
+
+#cliente-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#cliente-form input {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#cliente-form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#cliente-form button:hover {
+    background-color: #0056b3;
+}

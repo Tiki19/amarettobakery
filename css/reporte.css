@@ -1,0 +1,60 @@
+/* Estilos para la tabla de ventas */
+h1{
+  text-align: center;
+}
+.ventas-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: var(--background-color-cuerpo);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.ventas-table th{
+  border-bottom:1px solid red;
+  
+}
+
+.ventas-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid red;
+}
+
+.ventas-table th {
+  background-color: #f3cd9f;
+  font-weight: bold;
+}
+
+.ventas-table tbody tr:hover {
+  background-color: #f0f0f0;
+}
+
+.ventas-table td:nth-child(3) {
+  /* Estilo específico para la columna de Precio */
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.ventas-table td:nth-child(n+4) {
+  /* Estilo para las columnas de Stock, Nombre Cliente, Teléfono Cliente, Dirección Cliente */
+  font-family: Arial, sans-serif;
+}
+
+.ventas-table td:last-child {
+  /* Estilo para la columna de Acciones */
+  text-align: center;
+}
+
+.ventas-table button {
+  background-color: var(--primary-color);
+  color: red;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ventas-table button:hover {
+  background-color: #8c5d3e;
+}

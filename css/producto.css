@@ -1,0 +1,153 @@
+/* Estilos globales */
+*{
+padding: 100%;
+margin: auto;
+
+}
+:root {
+    --background-color-cabezal: #F2EBDE;
+    --background-color-cuerpo: #f7f2ec;
+    --primary-color: #c78b5b;
+    --barra-desplazamiento: #f3cd9f;
+}
+
+html {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+    background-color: var(--background-color-cuerpo);
+    margin: 0;
+    padding-top: 80px; /* Ajustar según la altura del header */
+    
+}
+
+/* Ajustar el padding-top para que el contenido no quede oculto */
+.contenedor {
+    width: 60%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.formulario {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    margin-top: 20px; /* Añadir espacio superior para evitar ocultamiento */
+}
+
+.formulario .titulo h1 {
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.formulario .registro {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.formulario .registro label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.formulario .registro input,
+.formulario .registro select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.formulario .registro input.redondeadonorelieve,
+.formulario .registro select.redondeadonorelieve {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 100%;
+}
+
+.formulario .botones {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.formulario .botones input {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.formulario .botones input:hover {
+    background-color: #b0724a;
+}
+
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+.tabla th, .tabla td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.tabla th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.form-section{
+    margin: auto;
+    padding: 6%;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

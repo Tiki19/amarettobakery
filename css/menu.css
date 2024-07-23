@@ -1,0 +1,338 @@
+:root {
+  --background-color-cabezal: #F2EBDE; /* Color de fondo del cabezal */
+  --background-color-cuerpo: #f7f2ec; /* Color de fondo del cuerpo */
+  --primary-color: #c78b5b; /* Color principal para los botones */
+  --barra-desplazamiento:#f3cd9f;/*color de barraza de desplazamiento*/
+}
+
+html {
+font-size: 63%;
+font-family: Arial, Helvetica, sans-serif;
+background-color: var(--background-color-cabezal);
+}
+
+body {
+  margin: 0;
+  background: var(--background-color-cuerpo); 
+  padding: 0;
+}
+
+.header-principal {
+  background-color: var(--background-color-cabezal); 
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000; 
+}
+
+.contener-cabezal {
+  max-width: 150rem;
+  margin: 0 auto; 
+  padding: 1rem 0;
+}
+
+.cabezal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cliente-pedido {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cliente-pedido i {
+  font-size: 2rem;
+  color: black;
+  margin-right: 0.5rem; 
+}
+
+.cliente-pedido i.fa-whatsapp {
+  color: green;
+  font-size: 2rem;
+  margin-right: 0.2rem;
+  padding-left: 15px;
+}
+
+.cliente-pedido i.fa-instagram {
+  color: purple;
+  font-size: 2rem;
+  margin-right: 0.5rem;
+}
+
+.cliente-pedido i.fa-facebook {
+  color: blue; 
+  font-size: 2rem;
+  margin-right: 0.5rem;
+}
+
+
+.contener-cliente-pedido {
+  display: flex;
+  flex-direction: column;
+}
+
+.cliente-pedido a {
+  text-decoration: none;
+  color: black;
+  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.contener-logo {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.contener-logo .logo-url{
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  color:#5e3e37;
+  margin-right: 10px;
+}
+
+.contener-logo i {
+  font-size: 3rem;
+}
+
+.contener-logo h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+.contener-logo .logo .first-word {
+  color: #5e3e37;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3); 
+}
+
+.contener-logo .logo .second-word {
+  color: #ebedf1; 
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3); 
+}
+/* Reset general */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; 
+}
+
+
+.contener-user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  z-index: 1000;
+  width: 250px;
+}
+
+.contener-user .fa-user {
+  font-size: 3rem;
+  color: var(--primary-color);
+  padding-right: 2.5rem;
+  border-right: 1px solid #e2e2e2;
+}
+
+
+#header-button {
+  margin: 0;
+  width: 100px;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+}
+
+.nav {
+  white-space: nowrap;
+}
+.menu-item i.fa-solid {
+  font-size: 1.8rem; /* Tamaño del icono */
+  background-color: transparent; /* Sin fondo de color */
+  padding: 10px; /* Ajuste opcional para el tamaño del área de clic */
+  align-items: center;
+}
+
+.nav ul,li {
+  list-style: none;
+}
+
+.nav .fa-bars {
+  font-size: 3rem;
+  color: var(--primary-color);
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.nav h1 {
+  color: var(--primary-color);
+  display: inline;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.nav li a,
+.nav li i {
+  background-color: var(--barra-desplazamiento);
+  color: #fff;
+  vertical-align: middle;
+  text-decoration: none;
+  padding: 8px;
+  display: inline-block;
+  font-size: 20px;
+}
+
+.nav li ul {
+  display: none;
+  position: absolute;
+  min-width: 150px;
+  background-color: var(--barra-desplazamiento); 
+}
+
+.nav li:hover > ul {
+  display: block;
+  left: 0;
+}
+
+.nav li ul li {
+  position: relative;
+}
+
+.parrafo-promocion {
+  text-align: center; /* Centrar el texto dentro del contenedor */
+}
+
+.parrafo-promocion p {
+  font-size: 18px; 
+  line-height: 1.6; 
+  font-family: 'Roboto', sans-serif; 
+  font-weight: bold; 
+  text-transform: uppercase; 
+  margin-bottom: 20px;
+}
+
+.parrafo-promocion p::first-line {
+  color: #FF5733; 
+}
+
+.slider{
+  width: 90vw;
+  height: auto;
+  margin: auto;
+  overflow: hidden;
+}
+.slider .slider-track{
+  display: flex;
+  animation: scroll 40s linear infinite;
+  -webkit-animation: scroll 40s linear infinite;
+  width: calc(400px*12);
+}
+.slider .slide{
+  width: 500px;
+}
+.slider .slide img{
+  width: 100%;
+}
+@keyframes scroll {
+  0%{
+   -webkit-transform: translateX(0);
+   transform : translateX(0); 
+  }
+  100%{
+    -webkit-transform: translateX(calc(-200px*6));
+    transform : translateX(calc(-200px*6)); 
+   }
+}
+
+
+.nosotros-content-text {
+  display: flex;
+  max-width: 100%; 
+  margin: auto; 
+  padding: 50px; 
+  background-color: white; 
+  word-wrap: break-word; 
+  text-rendering: optimizeLegibility; 
+  line-height: 1.5; 
+  font-style: normal; 
+  font-family: 'Roboto', sans-serif; 
+}
+
+.contenido-izquierda {
+  flex: 1; /* El contenido de la izquierda ocupa todo el espacio restante */
+  margin-right: 20px; /* Espacio entre el contenido izquierdo y la imagen */
+}
+
+.contenido-derecha {
+  flex: 0 0 auto; /* La imagen no crece ni se encoge */
+  width: 500px; /* Ancho fijo para la imagen */
+  display: flex;
+  justify-content: center; /* Centrar la imagen horizontalmente */
+  align-items: center; /* Centrar la imagen verticalmente */
+}
+
+.nosotros-content-text h2 {
+  font-size: 4rem; /* Tamaño de fuente del título */
+  margin-bottom: 10px; /* Espacio inferior del título */
+}
+
+.nosotros-content-text p {
+  font-size: 14px; /* Tamaño de fuente del párrafo */
+  line-height: 1.6; /* Altura de línea del párrafo */
+  color: #a4a4a4; /* Color del texto */
+  margin-right: 100px; /* Eliminar margen predeterminado */
+  text-align: justify; 
+}
+
+.contenido-derecha img {
+  display: block; /* Para asegurar que la imagen no tenga espacio adicional */
+  max-width: 100%; /* Imagen responsive, ocupando máximo el ancho disponible */
+  height: auto; /* Altura automática para mantener la proporción */
+}
+
+
+.pie-de-pagina {
+    background-color: var(--background-color-cabezal);
+    color: rgb(8, 0, 0);
+    padding: 20px 0;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+}
+
+.pie-de-pagina .contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pie-de-pagina p {
+    margin: 0;
+}
+
+.pie-de-pagina nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pie-de-pagina nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.pie-de-pagina nav ul li a {
+    color: rgb(7, 0, 0);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.pie-de-pagina nav ul li a:hover {
+    color: #000000;
+}
+
+

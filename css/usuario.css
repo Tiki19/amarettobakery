@@ -1,0 +1,122 @@
+:root {
+  --background-color-cabezal: #F2EBDE;
+  --background-color-cuerpo: #f7f2ec;
+  --primary-color: #c78b5b;
+  --barra-desplazamiento: #f3cd9f;
+}
+
+html {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+  background-color: var(--background-color-cuerpo);
+  margin: 0;
+  padding: 0;
+}
+
+.retroceso {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.retroceso .fa-chevron-left {
+  font-size: 1.5rem;
+  color: #007bff;
+}
+
+.retroceso .btn {
+  text-decoration: none;
+  color: #007bff;
+  transition: transform 0.2s ease-in-out;
+}
+
+.retroceso .btn:hover {
+  transform: translateX(-3px);
+}
+
+.form-container {
+  max-width: 500px;
+  margin: 100px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-group button {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.form-group button:hover {
+  background-color: #b0724a;
+}
+
+.table-container {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 18px;
+  text-align: left;
+}
+
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}

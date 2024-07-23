@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Amaretto Bakery / Empleado</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/empleado.css">
+    <script src='../json/empleado.js' defer></script>
+    <link rel="icon" href="../img/icono.png">
+    <script src="https://kit.fontawesome.com/81581fb069.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header-principal">
+        <div class="contener-cabezal">
+            <div class="cabezal">
+                <div class="cliente-pedido">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <div class="contener-cliente-pedido"> 
+                      <a href="https://wa.me/968300152" target="_blank">981 902 522</a>
+                    </div>
+                    <i class="fa-brands fa-instagram"></i>
+                    <div class="contener-cliente-pedido">
+                      <a href="https://www.instagram.com/amarettobkery/" target="_blank" >Amarettobkery</a>
+                    </div>
+                    <i class="fa-brands fa-facebook"></i>
+                    <div class="contener-cliente-pedido">
+                      <a href="https://www.facebook.com/Amaretto.Bakery/" target="_blank" >Facebook </a>
+                    </div>
+                </div>
+                <div class="contener-logo">
+                    <a class="logo-url" href="../paginas/menu.html">
+                      <img class="imagen" src="../img/icono.png">
+                    </a>
+                    <h1 class="logo">
+                      <span class="first-word">Amaretto</span>
+                      <span class="second-word">Bakery</span>
+                  </h1>
+                </div>
+                <div class="contener-user">
+                    <i class="fa-solid fa-user"></i>
+                    <div id="header-button">
+                      <ul class="nav">
+                        <li class="menu-item">
+                          <i class="fa-solid fa-bars"></i>
+                          <h1>MENÚ</h1>
+                          <ul>
+                            <li>
+                              <i class="fa-solid fa-ice-cream"></i>
+                              <a href="../paginas/producto.html">Productos</a>
+                            </li>
+                            <li>
+                              <i class="fa-regular fa-address-book"></i>
+                              <a href="../paginas/cliente.html">Clientes</a>
+                            </li>
+                            <li>
+                              <i class="fa-solid fa-user-plus"></i>
+                              <a href="../paginas/usuario.html">Usuarios</a>
+                            </li>
+                            <li>
+                              <i class="fa-solid fa-users"></i>
+                              <a href="../paginas/empleado.html">Empleados</a>
+                            </li>
+                            <li>
+                              <i class="fa-solid fa-cart-shopping"></i>
+                              <a href="../paginas/venta.html">Venta</a>
+                            </li>
+                            <li>
+                              <i class="fas fa-chart-line"></i>
+                              <a href="../paginas/reporte.html">Reportes</a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="retroceso">
+        <i class="fa-solid fa-chevron-left"></i>
+        <a href="../paginas/menu.html" class="btn">Regresar</a>
+    </div>
+    <div class="form-container">
+        <form id="formCliente" method="post" action="/submit_cliente">
+            <div class="contenedor">
+                <div class="formulario">
+                    <div class="contener-formulario">
+                        <div class="titulo">
+                            <h1>Gestionar Empleados</h1>
+                        </div>
+                        <div class="contenedor-text-input">
+                            <div class="registro">
+                                <label for="DNI">DNI:</label>
+                                <input type="text" id="DNI" name="DNI" class="redondeadonorelieve">
+                            </div>
+                            <div class="registro">
+                                <label for="nombres">Nombres:</label>
+                                <input type="text" id="nombre" name="nombre" class="redondeadonorelieve">
+                            </div>
+                            <div class="registro">
+                                <label for="Apellido-Paterno">Apellido Paterno:</label>
+                                <input type="text" id="Apellido-Paterno" name="Apellido-Paterno" class="redondeadonorelieve">
+                            </div>
+                            <div class="registro">
+                                <label for="Apellido-Materno">Apellido Materno:</label>
+                                <input type="text" id="Apellido-Materno" name="Apellido-Materno" class="redondeadonorelieve">
+                            </div>
+                            <div class="registro">
+                                <label for="Celular">Celular:</label>
+                                <input type="text" id="Celular" name="Celular" required pattern="[0-9]{9}" class="redondeadonorelieve">
+                            </div>
+                            <div class="registro">
+                                <label for="Distrito">Distrito:</label>
+                                <input type="text" id="Distrito" name="Distrito" class="redondeadonorelieve">
+                            </div>
+                            <div class="registro">
+                                <label for="Fecha-Hora-Registro">Fecha/Hora de Registro:</label>
+                                <input type="datetime-local" id="Fecha-Hora-Registro" name="Fecha-Hora-Registro" class="redondeadonorelieve">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contener-botones">
+                        <div class="botones">
+                            <input type="submit" value="Guardar">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="espacio"></div>
+    <table class="tabla">
+        <thead>
+            <tr>
+                <th>DNI/RUC</th>
+                <th>Nombres</th>
+                <th>Apellido Paterno</th>
+                <th>Apellido Materno</th>
+                <th>Celular</th>
+                <th>Distrito</th>
+                <th>Fecha/Hora de registro</th>
+            </tr>
+        </thead>
+        <tbody id="contenedor-filas"></tbody>
+    </table>
+    <div id="modaleditarcliente" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="formulario">
+                <div class="titulo">
+                    <h1>Editar Empleado</h1>
+                </div>
+                <div class="registro">
+                    <label for="editar-dni">DNI</label>
+                    <input type="text" id="editar-dni" class="redondeadonorelieve" readonly>
+                </div>
+                <div class="registro">
+                    <label for="editar-nombre">Nombre</label>
+                    <input type="text" id="editar-nombre" class="redondeadonorelieve">
+                </div>
+                <div class="registro">
+                    <label for="editar-apellido">Apellido</label>
+                    <input type="text" id="editar-apellido" class="redondeadonorelieve">
+                </div>
+                <div class="registro">
+                    <label for="editar-correo">Correo</label>
+                    <input type="email" id="editar-correo" class="redondeadonorelieve">
+                </div>
+                <div class="registro">
+                    <label for="editar-telefono">Teléfono</label>
+                    <input type="tel" id="editar-telefono" class="redondeadonorelieve">
+                </div>
+                <div class="registro">
+                    <label for="editar-direccion">Dirección</label>
+                    <input type="text" id="editar-direccion" class="redondeadonorelieve">
+                </div>
+                <div class="botones">
+                    <input type="button" id="actualizar" value="Actualizar">
+                    <input type="button" id="eliminar" value="Eliminar">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

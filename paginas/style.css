@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: url(../img/fondo3pasteleria.avif) no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+.welcome{
+    width: 40%;
+    padding-top: 15px;
+    background: transparent;
+    margin-bottom: -30px;
+}
+.welcome h1{
+    font-size: 30px;
+    text-align: center;
+    background: #fff;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.inicio{
+    width: 420px;
+    background: transparent;
+    border-radius: 10px;
+    padding: 30px 40px;
+    color: #fff;
+    border: 2px solid rgba(255,255,255,.2);
+    backdrop-filter: blur(2px);
+    box-shadow: 0 0 10px rgb(255, 255, 255, .2);
+    margin-top: 5%;
+}
+
+.inicio h1{
+    font-size: 36px;
+    text-align: center;
+    background: white;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.inicio p{
+    font-size: 15px;
+    text-align: center;
+    color: white;
+}
+.inicio btn-input {
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.btn-input input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgb(255, 255, 255, .2);
+    border-radius: 20px;
+    font-size: 15px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+
+.btn-input input::placeholder{
+    color: #fff;
+}
+
+.inicio .inicio-sesion{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+}
+
+.inicio-sesion a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.inicio-sesion a:hover{
+    text-decoration: underline;
+}
+
+.inicio .btn{
+    width: 100%;
+    height: 40px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    cursor: pointer;
+    font-size: 15px;
+    color: #333;
+    font-weight: 600;
+}
+
+.inicio .inicio-sesion{
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.inicio-sesion p a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 6000;
+    text-align: center;
+}
+
+.inicio-sesion p a:hover{
+    text-decoration: underline;
+}
+
+.register p a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 6000;
+    text-align: center;
+}
+.register p a:hover{
+    text-decoration: underline;
+}
+.input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-container i {
+    position: absolute;
+    left: 10px;
+}
+
+.input-container input {
+    padding-left: 30px;
+}
+
+.input-container select{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgb(255, 255, 255, .2);
+    border-radius: 20px;
+    font-size: 15px;
+    color: #070000;
+    padding: 10px 45px 10px 20px;
+    text-align: center;
+}
+
+
